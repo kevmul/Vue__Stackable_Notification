@@ -1,29 +1,24 @@
-# stackable-notifications
+#Stackable Notifications
 
 ## Project setup
+
 ```
 yarn install
-```
-
-### Compiles and hot-reloads for development
-```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+## What is this?
+
+I wanted to create a notification system that you can stack if new notifications come in.
+You can easily trigger new items to load in with
+
 ```
-yarn run build
+flash(<title>,<body>)
 ```
 
-### Run your tests
-```
-yarn run test
-```
+You can also pass in more variables such as Type (success|info|warning|error), display time (in milliseconds), and if it is important.
 
-### Lints and fixes files
 ```
-yarn run lint
+flash(<title>,<body>,<type>,<important>,<display_time>)
+flash("Success!", "That thing you did Worked!", "success", false, 3000)
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
