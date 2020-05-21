@@ -12,10 +12,10 @@ window.flash = function(
   title,
   body = null,
   type = "success",
+  display_time = 3000,
   important = false,
-  display_time = 3000
 ) {
-  window.Event.$emit("flash", title, body, type, important, display_time);
+  window.Event.$emit("flash", title, body, type, display_time, important);
 }; // flash('my new flash message')
 
 new Vue({

@@ -33,7 +33,7 @@ export default {
   },
 
   created() {
-    Event.$on("flash", (title, body, type, important, display_time) => {
+    Event.$on("flash", (title, body, type, display_time, important) => {
       this.notifications.push({
         title,
         body,
