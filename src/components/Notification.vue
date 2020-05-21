@@ -30,10 +30,10 @@ export default {
 
   methods: {
     hide() {
-      !this.important &&
-        setTimeout(() => {
-          this.closeNotification();
-        }, this.display_time);
+      if (this.important) return;
+      setTimeout(() => {
+        this.closeNotification();
+      }, this.display_time);
     },
     closeNotification() {
       //   this.$emit("remove", this.$vnode.key);
